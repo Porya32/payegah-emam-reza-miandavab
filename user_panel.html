@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پنل اعضا - پایگاه بسیج</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="لوگو" class="logo" />
+    <h1>پنل اعضای پایگاه بسیج</h1>
+  </header>
+
+  <main class="container">
+    <h2>پیام رسمی مدیران</h2>
+    <section class="message-box" id="messageBox">
+      <p>هیچ پیامی موجود نیست.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>کاربر: <span id="userName"></span></p>
+  </footer>
+
+  <script>
+    const user = localStorage.getItem("username") || "ناشناس";
+    document.getElementById("userName").textContent = user;
+
+    const box = document.getElementById("messageBox");
+    const messageData = JSON.parse(localStorage.getItem("basijMessage"));
+
+    if (messageData) {
+      box.innerHTML = `
+        <div class="official-message">
+          <h3>📢 پیام مدیر</h3>
+          <p>${messageData.content}</p>
+          <small>ارسال توسط: ${messageData.from}</small><br>
+          <small>تاریخ: ${messageData.time}</small>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
