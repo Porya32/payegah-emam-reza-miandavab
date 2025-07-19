@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ثبت‌نام در سامانه بسیج</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-page">
+  <div class="login-box">
+    <img src="logo.png" alt="لوگو پایگاه" class="logo"/>
+    <h2>ثبت‌نام</h2>
+    <form id="signupForm">
+      <input type="text" id="newUsername" placeholder="نام کاربری" required />
+      <input type="password" id="newPassword" placeholder="رمز عبور" required />
+      <select id="newRole" required>
+        <option value="">انتخاب نقش</option>
+        <option value="member">عضو عادی</option>
+        <option value="admin">مدیر</option>
+        <option value="owner">مالک</option>
+      </select>
+      <button type="submit">ثبت‌نام</button>
+      <p id="signupError" class="error-text"></p>
+    </form>
+    <p class="small-link">
+      حساب دارید؟ <a href="login.html">وارد شوید</a>
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

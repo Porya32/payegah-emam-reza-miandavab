@@ -1,0 +1,51 @@
+<!-- File: panel.html -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>پنل کاربران | پایگاه بسیج</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="panel-page">
+
+  <header class="panel-header">
+    <img src="images/logo.png" alt="لوگوی بسیج" class="logo">
+    <h1>پنل کاربران پایگاه بسیج</h1>
+    <button onclick="logout()" class="logout-btn">خروج</button>
+  </header>
+
+  <section class="user-info">
+    <h2>خوش آمدید، <span id="username-panel">نام کاربر</span> (<span id="role-panel">مقام</span>)</h2>
+  </section>
+
+  <section class="members-list">
+    <h3>لیست اعضای پایگاه:</h3>
+    <ul id="members-ul">
+      <!-- با جاوااسکریپت پر میشه -->
+    </ul>
+  </section>
+
+  <section class="messages-section">
+    <h3>پیام‌های رسمی مدیران:</h3>
+    <div id="messages-box">
+      <!-- پیام‌ها با جاوااسکریپت نمایش داده میشه -->
+    </div>
+    <div id="message-form-section">
+      <textarea id="new-message" placeholder="متن پیام..."></textarea>
+      <button onclick="sendMessage()">ارسال پیام</button>
+    </div>
+  </section>
+
+  <section class="activities-table">
+    <h3>جدول فعالیت‌های بسیجی‌ها:</h3>
+    <div id="activity-table">
+      <!-- جدول با جاوااسکریپت ساخته میشه -->
+    </div>
+    <div id="table-controls">
+      <button onclick="addActivityRow()">افزودن ردیف</button>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>سایت پایگاه بسیج</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="login-box" id="loginBox">
+    <h2>ورود به سامانه</h2>
+    <input type="text" id="username" placeholder="نام کاربری"/>
+    <input type="password" id="password" placeholder="رمز عبور"/>
+    <button onclick="login()">ورود</button>
+    <p id="loginError" class="error"></p>
+  </div>
+
+  <div class="main" id="mainBox" style="display: none;">
+    <header>
+      <h1>سامانه رسمی پایگاه بسیج</h1>
+      <button onclick="logout()">خروج</button>
+    </header>
+
+    <section>
+      <h2>خوش آمدید، <span id="welcomeUser"></span>!</h2>
+      <p>سمت شما: <strong id="userRole"></strong></p>
+    </section>
+
+    <section class="box">
+      <h3>لیست اعضا</h3>
+      <ul id="membersList">
+        <li>مالک - مالک پایگاه</li>
+        <li>mohsen - مدیر</li>
+        <li>ali - عضو عادی</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h3>پیام‌های رسمی</h3>
+      <div id="messages">
+        <p>✉ پیام رسمی از مدیران نمایش داده خواهد شد.</p>
+      </div>
+      <div id="messageForm" style="display: none;">
+        <textarea id="newMessage" placeholder="پیام جدید بنویسید..."></textarea>
+        <button onclick="addMessage()">ارسال پیام</button>
+      </div>
+    </section>
+
+    <section class="box">
+      <h3>جدول اطلاعات فعالیت‌ها</h3>
+      <table id="activityTable">
+        <thead>
+          <tr>
+            <th>نام</th>
+            <th>تاریخ</th>
+            <th>فعالیت</th>
+          </tr>
+        </thead>
+        <tbody id="activityBody">
+          <tr><td>ali</td><td>1403/04/20</td><td>شرکت در نشست فرهنگی</td></tr>
+        </tbody>
+      </table>
+
+      <div id="activityForm" style="display: none;">
+        <input type="text" id="actName" placeholder="نام"/>
+        <input type="text" id="actDate" placeholder="تاریخ"/>
+        <input type="text" id="actDesc" placeholder="نوع فعالیت"/>
+        <button onclick="addActivity()">افزودن</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "username": "admin",
+    "password": "admin123",
+    "displayName": "سید محمد حسینی",
+    "role": "مالک"
+  },
+  {
+    "username": "modir1",
+    "password": "modir123",
+    "displayName": "اکبر رفیعی",
+    "role": "مدیر"
+  },
+  {
+    "username": "user1",
+    "password": "user123",
+    "displayName": "حسین احمدی",
+    "role": "عضو"
+  },
+  {
+    "username": "user2",
+    "password": "user456",
+    "displayName": "علی باقری",
+    "role": "عضو"
+  }
+]
