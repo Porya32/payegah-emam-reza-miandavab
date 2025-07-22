@@ -3,19 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ورود به سامانه بسیج</title>
+  <title>ورود به سیستم</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background-color: #121212;
+      border: 2px solid #00ff99;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00ff99;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #1f1f1f;
+      border: 1px solid #00ff99;
+      color: #00ff99;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #00ff99;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #00cc77;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00ff99;
+    }
+  </style>
 </head>
-<body class="login-page">
-  <div class="login-box">
-    <img src="logo.png" alt="لوگو پایگاه" class="logo"/>
-    <h2>ورود به سامانه</h2>
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="نام کاربری" required />
-      <input type="password" id="password" placeholder="رمز عبور" required />
-      <button type="submit">ورود</button>
-      <p id="loginError" class="error-text"></p>
-    </form>
+<body>
+  <div class="login-container">
+    <h2>ورود به حساب</h2>
+    <input type="text" id="loginUsername" placeholder="نام کاربری" />
+    <input type="password" id="loginPassword" placeholder="رمز عبور" />
+    <button onclick="loginUser()">ورود</button>
   </div>
 
   <script src="script.js"></script>
